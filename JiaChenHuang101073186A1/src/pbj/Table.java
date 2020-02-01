@@ -101,7 +101,7 @@ public class Table {
 	}
 
 	/**
-	 * test to see if chefOne can eat, if they can, then eat
+	 * test to see if any chef can eat, if they can, then eat
 	 */
 	public synchronized void chefEat() {
 		while (!notEmpty() || !chefOneEat) {

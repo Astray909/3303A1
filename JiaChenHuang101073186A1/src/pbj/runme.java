@@ -32,9 +32,9 @@ public class runme {
 		//initializes threads for chefs and agent
 		agent = new Thread(new Agent(table), "The Agent");
 
-		chefOne = new Thread(new chefOne(table), "Chef One");
-		chefTwo = new Thread(new chefTwo(table), "Chef Two");
-		chefThree = new Thread(new chefThree(table), "Chef Three");
+		chefOne = new Thread(new chef(table), "Chef One");
+		chefTwo = new Thread(new chef(table), "Chef Two");
+		chefThree = new Thread(new chef(table), "Chef Three");
 		
 		//start the threads
 		agent.start();
