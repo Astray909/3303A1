@@ -104,56 +104,18 @@ public class Table {
 	 * test to see if any chef can eat, if they can, then eat
 	 */
 	public synchronized void chefEat() {
-		while (!notEmpty() || !chefOneEat) {
+		if(!notEmpty())
+		{
 			try {
 				wait();
 			} catch (InterruptedException e) {
 				return;
 			}
 		}
-		eat();
-	}
-	
-	/**
-	 * test to see if chefOne can eat, if they can, then eat
-	 */
-	public synchronized void chefOneEat() {
-		while (!notEmpty() || !chefOneEat) {
-			try {
-				wait();
-			} catch (InterruptedException e) {
-				return;
-			}
+		else
+		{
+			eat();
 		}
-		eat();
-	}
-
-	/**
-	 * test to see if chefTwo can eat, if they can, then eat
-	 */
-	public synchronized void chefTwoEat() {
-		while (!notEmpty() || !chefTwoEat) {
-			try {
-				wait();
-			} catch (InterruptedException e) {
-				return;
-			}
-		}
-		eat();
-	}
-
-	/**
-	 * test to see if chefThree can eat, if they can, then eat
-	 */
-	public synchronized void chefThreeEat() {
-		while (!notEmpty() || !chefThreeEat) {
-			try {
-				wait();
-			} catch (InterruptedException e) {
-				return;
-			}
-		}
-		eat();
 	}
 	
 	/**
