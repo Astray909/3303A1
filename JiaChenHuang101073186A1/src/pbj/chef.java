@@ -21,7 +21,7 @@ public class chef extends Thread {
 	 */
 	public void run() {
 		while (true) {
-			table.chefOneEat();
+			table.chefEat();
 
 			try {
 				Thread.sleep(700);//sleeps the thread for 700ms, so outputs will appear in a slower pace
